@@ -19,7 +19,7 @@ node ('master') {
     deploy 'staging'
 }
 
-input message: "Does staging look good?"
+//input message: "Does staging look good?"
 try {
     checkpoint('Before production')
 } catch (NoSuchMethodError _) {
