@@ -51,3 +51,8 @@ def deploy(id) {
 def undeploy(id) {
     sh "rm /tmp/${id}.war"
 }
+
+stage('example') {
+   annotate('WebLink','http://example.com');
+   annotate('MySpecialCondition','true');
+}
