@@ -10,6 +10,7 @@ node ('master') {
     checkout scm
     mvn 'clean package'
     dir('target') {stash name: 'war', includes: 'x.war'}
+    echo "${env.GIT_URL}"
 }
 
 stage 'QA'
