@@ -1,5 +1,10 @@
 #!groovy
 
+def jobName = "${env.JOB_NAME}"
+echo "${env.GIT_URL}"
+Jenkins.instance.getItem(jobName.split('/')[0]).description = "<a href='https://github.com/Anuj1990/pipeline-as-code-demo.git'>PR</a>"
+currentBuild.description = "<a href='https://github.com/Anuj1990/pipeline-as-code-demo.git'>PR</a>"
+
 stage 'Dev'
 node ('master') {
     checkout scm
