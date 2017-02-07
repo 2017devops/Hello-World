@@ -8,8 +8,8 @@ currentBuild.description = "<a href='https://github.com/Anuj1990/pipeline-as-cod
 stage 'Dev'
 node ('master') {
     checkout scm
-    mvn 'clean package'
-    dir('target') {stash name: 'war', includes: 'x.war'}
+    //mvn 'clean package'
+    //dir('target') {stash name: 'war', includes: 'x.war'}
     echo "${env.GIT_URL}"
 }
 
