@@ -18,9 +18,9 @@ node ('master') {
 }
 
 stage 'QA'
-node('master'){
+
     echo "QA Deployment"
-}
+
 /*parallel(longerTests: {
     runTests(30)
 }, quickerTests: {
@@ -28,14 +28,14 @@ node('master'){
 })*/
 
 stage 'UAT'
-node('master'){
+
     echo "UAT Deployment"
-}
+
 
 stage 'PROD'
-node('master'){
+
     echo "PROD Deployment"
-}
+
 
 stage name: 'Staging', concurrency: 1
 node ('master') {
