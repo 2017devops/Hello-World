@@ -4,7 +4,6 @@ stage 'Dev'
     checkout scm
     
 stage 'QA'
-
     echo "QA Deployment"
 
 /*parallel(longerTests: {
