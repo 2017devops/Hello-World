@@ -8,7 +8,7 @@
   <name>demo-war Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <scm>
-    <developerConnection>scm:git:git@github.com:Anuj1990/pipeline-as-code-demo.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/Anuj1990/pipeline-as-code-demo.git</developerConnection>
   </scm>
   <dependencies>
     <dependency>
