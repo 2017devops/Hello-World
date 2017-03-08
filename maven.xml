@@ -68,7 +68,8 @@
         		</executions>
       		</plugin>
         </plugins>
-	  <distributionManagement>
+  </build>
+<distributionManagement>
  <site>
   <id>s3.site</id>
   <url>s3://mybucket-sateesh/site</url>
@@ -82,5 +83,4 @@
   <url>s3://mybucket-sateesh/snapshot</url>
  </snapshotRepository>
 </distributionManagement>
-  </build>
 </project>
