@@ -1,17 +1,11 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkinsci.plugins.workflow.demo</groupId>
   <artifactId>demo-war</artifactId>
   <packaging>war</packaging>
-  <version>1.0.${version.timestamp}</version>
+  <version>1.0-SNAPSHOT</version>
   <name>demo-war Maven Webapp</name>
 
-  <properties>
-    <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-    <version.timestamp>${maven.build.timestamp}</version.timestamp>
-  </properties>
-	
   <scm>
     <developerConnection>scm:git:https://github.com/Anuj1990/pipeline-as-code-demo.git</developerConnection>
   </scm>
@@ -28,7 +22,14 @@
    </dependency>
   </dependencies>
   <build>
-    <finalName>x</finalName>
+    <finalName>demo</finalName>
+<extensions>
+  <extension>
+    <groupId>org.kuali.maven.wagons</groupId>
+    <artifactId>maven-s3-wagon</artifactId>
+    <version>1.2.1</version>
+  </extension>
+ </extensions>
     <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -67,5 +68,5 @@
         		</executions>
       		</plugin>
         </plugins>
-  </build>
+</build>
 </project>
